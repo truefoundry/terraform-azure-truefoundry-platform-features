@@ -70,20 +70,21 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_truefoundry_blob_connection_string"></a> [truefoundry\_blob\_connection\_string](#output\_truefoundry\_blob\_connection\_string) | n/a |
-| <a name="output_truefoundry_blob_container_id"></a> [truefoundry\_blob\_container\_id](#output\_truefoundry\_blob\_container\_id) | n/a |
-| <a name="output_truefoundry_blob_storage_account_id"></a> [truefoundry\_blob\_storage\_account\_id](#output\_truefoundry\_blob\_storage\_account\_id) | n/a |
-| <a name="output_truefoundry_blob_storage_account_primary_blob_host"></a> [truefoundry\_blob\_storage\_account\_primary\_blob\_host](#output\_truefoundry\_blob\_storage\_account\_primary\_blob\_host) | n/a |
-| <a name="output_truefoundry_blob_storage_account_primary_connection_string"></a> [truefoundry\_blob\_storage\_account\_primary\_connection\_string](#output\_truefoundry\_blob\_storage\_account\_primary\_connection\_string) | n/a |
-| <a name="output_truefoundry_blob_storage_account_primary_location"></a> [truefoundry\_blob\_storage\_account\_primary\_location](#output\_truefoundry\_blob\_storage\_account\_primary\_location) | n/a |
-| <a name="output_truefoundry_blob_storage_account_primary_web_host"></a> [truefoundry\_blob\_storage\_account\_primary\_web\_host](#output\_truefoundry\_blob\_storage\_account\_primary\_web\_host) | n/a |
-| <a name="output_truefoundry_cloud_integrations_azuread_application_id"></a> [truefoundry\_cloud\_integrations\_azuread\_application\_id](#output\_truefoundry\_cloud\_integrations\_azuread\_application\_id) | n/a |
+| <a name="output_truefoundry_blob_container_id"></a> [truefoundry\_blob\_container\_id](#output\_truefoundry\_blob\_container\_id) | Storage account container ID |
+| <a name="output_truefoundry_blob_storage_account_id"></a> [truefoundry\_blob\_storage\_account\_id](#output\_truefoundry\_blob\_storage\_account\_id) | Storage account id |
+| <a name="output_truefoundry_blob_storage_account_primary_blob_host"></a> [truefoundry\_blob\_storage\_account\_primary\_blob\_host](#output\_truefoundry\_blob\_storage\_account\_primary\_blob\_host) | Storage account primary blob host |
+| <a name="output_truefoundry_blob_storage_account_primary_connection_string"></a> [truefoundry\_blob\_storage\_account\_primary\_connection\_string](#output\_truefoundry\_blob\_storage\_account\_primary\_connection\_string) | Storage account primary connection string |
+| <a name="output_truefoundry_blob_storage_account_primary_location"></a> [truefoundry\_blob\_storage\_account\_primary\_location](#output\_truefoundry\_blob\_storage\_account\_primary\_location) | Storage account primary location |
+| <a name="output_truefoundry_blob_storage_account_primary_web_host"></a> [truefoundry\_blob\_storage\_account\_primary\_web\_host](#output\_truefoundry\_blob\_storage\_account\_primary\_web\_host) | Storage account primary web host url |
+| <a name="output_truefoundry_blob_storage_root_url"></a> [truefoundry\_blob\_storage\_root\_url](#output\_truefoundry\_blob\_storage\_root\_url) | Storage account root URL for blob storage |
+| <a name="output_truefoundry_cloud_integrations_azuread_application_client_id"></a> [truefoundry\_cloud\_integrations\_azuread\_application\_client\_id](#output\_truefoundry\_cloud\_integrations\_azuread\_application\_client\_id) | Azure AD application client ID |
+| <a name="output_truefoundry_cloud_integrations_azuread_application_id"></a> [truefoundry\_cloud\_integrations\_azuread\_application\_id](#output\_truefoundry\_cloud\_integrations\_azuread\_application\_id) | Azure AD application ID |
 | <a name="output_truefoundry_cloud_integrations_azuread_application_name"></a> [truefoundry\_cloud\_integrations\_azuread\_application\_name](#output\_truefoundry\_cloud\_integrations\_azuread\_application\_name) | n/a |
 | <a name="output_truefoundry_cloud_integrations_service_principal_name"></a> [truefoundry\_cloud\_integrations\_service\_principal\_name](#output\_truefoundry\_cloud\_integrations\_service\_principal\_name) | n/a |
 | <a name="output_truefoundry_cloud_integrations_service_principal_password"></a> [truefoundry\_cloud\_integrations\_service\_principal\_password](#output\_truefoundry\_cloud\_integrations\_service\_principal\_password) | n/a |
 | <a name="output_truefoundry_cloud_integrations_service_principal_tenant_id"></a> [truefoundry\_cloud\_integrations\_service\_principal\_tenant\_id](#output\_truefoundry\_cloud\_integrations\_service\_principal\_tenant\_id) | n/a |
-| <a name="output_truefoundry_container_registry_admin_password"></a> [truefoundry\_container\_registry\_admin\_password](#output\_truefoundry\_container\_registry\_admin\_password) | n/a |
-| <a name="output_truefoundry_container_registry_admin_username"></a> [truefoundry\_container\_registry\_admin\_username](#output\_truefoundry\_container\_registry\_admin\_username) | n/a |
-| <a name="output_truefoundry_container_registry_id"></a> [truefoundry\_container\_registry\_id](#output\_truefoundry\_container\_registry\_id) | n/a |
-| <a name="output_truefoundry_container_registry_login_server"></a> [truefoundry\_container\_registry\_login\_server](#output\_truefoundry\_container\_registry\_login\_server) | n/a |
+| <a name="output_truefoundry_container_registry_admin_password"></a> [truefoundry\_container\_registry\_admin\_password](#output\_truefoundry\_container\_registry\_admin\_password) | Container registry admin password |
+| <a name="output_truefoundry_container_registry_admin_username"></a> [truefoundry\_container\_registry\_admin\_username](#output\_truefoundry\_container\_registry\_admin\_username) | Container registry admin username |
+| <a name="output_truefoundry_container_registry_id"></a> [truefoundry\_container\_registry\_id](#output\_truefoundry\_container\_registry\_id) | Container registry ID |
+| <a name="output_truefoundry_container_registry_login_server"></a> [truefoundry\_container\_registry\_login\_server](#output\_truefoundry\_container\_registry\_login\_server) | Container registry login server url |
 <!-- END_TF_DOCS -->
