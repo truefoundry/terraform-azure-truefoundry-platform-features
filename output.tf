@@ -64,33 +64,33 @@ output "truefoundry_container_registry_admin_password" {
 }
 
 ##################################################################################
-## Cloud Integrations
+## Cluster Integrations
 ##################################################################################
 
-output "truefoundry_cloud_integrations_azuread_application_id" {
-  value       = var.feature_cloud_integration_enabled ? azuread_application.truefoundry_platform_features_application[0].id : ""
+output "truefoundry_cluster_integrations_azuread_application_id" {
+  value       = var.feature_cluster_integration_enabled ? azuread_application.truefoundry_platform_features_application[0].id : ""
   description = "Azure AD application ID"
 }
 
-output "truefoundry_cloud_integrations_azuread_application_client_id" {
-  value       = var.feature_cloud_integration_enabled ? azuread_application.truefoundry_platform_features_application[0].client_id : ""
+output "truefoundry_cluster_integrations_azuread_application_client_id" {
+  value       = var.feature_cluster_integration_enabled ? azuread_application.truefoundry_platform_features_application[0].client_id : ""
   description = "Azure AD application client ID"
 }
 
-output "truefoundry_cloud_integrations_service_principal_name" {
-  value     = var.feature_cloud_integration_enabled ? azuread_service_principal_password.truefoundry_platform_features_service_principal_password[0].value : ""
+output "truefoundry_cluster_integrations_service_principal_name" {
+  value     = var.feature_cluster_integration_enabled ? azuread_service_principal_password.truefoundry_platform_features_service_principal_password[0].value : ""
   sensitive = true
 }
 
-output "truefoundry_cloud_integrations_service_principal_tenant_id" {
-  value = var.feature_cloud_integration_enabled ? azuread_service_principal.truefoundry_platform_features_service_principal[0].application_tenant_id : ""
+output "truefoundry_cluster_integrations_service_principal_tenant_id" {
+  value = var.feature_cluster_integration_enabled ? azuread_service_principal.truefoundry_platform_features_service_principal[0].application_tenant_id : ""
 }
 
-output "truefoundry_cloud_integrations_service_principal_password" {
-  value     = var.feature_cloud_integration_enabled ? azuread_service_principal_password.truefoundry_platform_features_service_principal_password[0].value : ""
+output "truefoundry_cluster_integrations_service_principal_password" {
+  value     = var.feature_cluster_integration_enabled ? azuread_service_principal_password.truefoundry_platform_features_service_principal_password[0].value : ""
   sensitive = true
 }
 
-output "truefoundry_cloud_integrations_azuread_application_name" {
-  value = var.feature_cloud_integration_enabled ? local.cluster_name : ""
+output "truefoundry_cluster_integrations_azuread_application_name" {
+  value = var.feature_cluster_integration_enabled ? local.cluster_name : ""
 }

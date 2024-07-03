@@ -8,4 +8,3 @@ resource "azurerm_container_registry" "truefoundry_container_registry" {
   public_network_access_enabled = var.container_registry_public_network_access_enabled
   tags                          = local.tags
 }
-

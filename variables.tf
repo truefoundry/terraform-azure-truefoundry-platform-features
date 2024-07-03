@@ -161,44 +161,44 @@ variable "container_registry_public_network_access_enabled" {
 }
 
 ##################################################################################
-## Cloud Integration
+## Cluster Integration
 ##################################################################################
 
-variable "feature_cloud_integration_enabled" {
-  description = "Enable the support of cloud integration"
+variable "feature_cluster_integration_enabled" {
+  description = "Enable the support of cluster integration"
   default     = true
   type        = bool
 }
 
-variable "cloud_integration_azuread_application_enable_override" {
-  description = "Enable overriding the name of azuread application. This will only be used if feature_cloud_integration_azuread_application_enabled is true. You need to pass cloud_integration_azuread_application_override_name to pass the azuread application name"
+variable "cluster_integration_azuread_application_enable_override" {
+  description = "Enable overriding the name of azuread application. This will only be used if feature_cluster_integration_azuread_application_enabled is true. You need to pass cluster_integration_azuread_application_override_name to pass the azuread application name"
   type        = bool
   default     = false
 }
 
-variable "cloud_integration_azuread_application_override_name" {
-  description = "Azuread application name. Only used if cloud_integration_azuread_application_enable_override is true"
+variable "cluster_integration_azuread_application_override_name" {
+  description = "Azuread application name. Only used if cluster_integration_azuread_application_enable_override is true"
   type        = string
   default     = ""
   validation {
-    condition     = var.cloud_integration_azuread_application_override_name == "" || can(regex("^[a-z0-9-]{0,119}[a-z0-9]$", var.cloud_integration_azuread_application_override_name))
+    condition     = var.cluster_integration_azuread_application_override_name == "" || can(regex("^[a-z0-9-]{0,119}[a-z0-9]$", var.cluster_integration_azuread_application_override_name))
     error_message = "Container name must be alphanumeric with length between 120 characters"
   }
 }
 
-variable "cloud_integration_sign_in_audience" {
-  description = "sign_in_audience of the cloud integration"
+variable "cluster_integration_sign_in_audience" {
+  description = "sign_in_audience of the cluster integration"
   type        = string
   default     = "AzureADMyOrg"
 }
 
-variable "cloud_integration_service_principal_password_expiry_end_date" {
+variable "cluster_integration_service_principal_password_expiry_end_date" {
   description = "End date post which service principal password would expire"
   type        = string
   default     = "2124-02-12T09:42:53Z"
 }
 
-variable "cloud_integration_service_principal_role" {
+variable "cluster_integration_service_principal_role" {
   description = "Role that will be assigned to the service principal on AKS cluster"
   type        = string
   default     = "Reader"
