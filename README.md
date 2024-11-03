@@ -5,15 +5,15 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.4 |
-| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | 2.47.0 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.94.0 |
+| <a name="requirement_azuread"></a> [azuread](#requirement\_azuread) | >= 2.47.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | >= 3.94.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | 2.47.0 |
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.94.0 |
+| <a name="provider_azuread"></a> [azuread](#provider\_azuread) | >= 2.47.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | >= 3.94.0 |
 
 ## Modules
 
@@ -23,13 +23,13 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [azuread_application.truefoundry_platform_features_application](https://registry.terraform.io/providers/hashicorp/azuread/2.47.0/docs/resources/application) | resource |
-| [azuread_service_principal.truefoundry_platform_features_service_principal](https://registry.terraform.io/providers/hashicorp/azuread/2.47.0/docs/resources/service_principal) | resource |
-| [azuread_service_principal_password.truefoundry_platform_features_service_principal_password](https://registry.terraform.io/providers/hashicorp/azuread/2.47.0/docs/resources/service_principal_password) | resource |
-| [azurerm_container_registry.truefoundry_container_registry](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/container_registry) | resource |
-| [azurerm_role_assignment.truefoundry_reader_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/role_assignment) | resource |
-| [azurerm_storage_account.truefoundry_platform_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/storage_account) | resource |
-| [azurerm_storage_container.truefoundry_platform_container](https://registry.terraform.io/providers/hashicorp/azurerm/3.94.0/docs/resources/storage_container) | resource |
+| [azuread_application.truefoundry_platform_features_application](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/application) | resource |
+| [azuread_service_principal.truefoundry_platform_features_service_principal](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal) | resource |
+| [azuread_service_principal_password.truefoundry_platform_features_service_principal_password](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal_password) | resource |
+| [azurerm_container_registry.truefoundry_container_registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry) | resource |
+| [azurerm_role_assignment.truefoundry_reader_role_assignment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment) | resource |
+| [azurerm_storage_account.truefoundry_platform_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account) | resource |
+| [azurerm_storage_container.truefoundry_platform_container](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_container) | resource |
 
 ## Inputs
 
@@ -39,13 +39,13 @@ No modules.
 | <a name="input_blob_container_override_name"></a> [blob\_container\_override\_name](#input\_blob\_container\_override\_name) | Container name. Only used if container\_enable\_override is true | `string` | `""` | no |
 | <a name="input_blob_storage_account_account_tier"></a> [blob\_storage\_account\_account\_tier](#input\_blob\_storage\_account\_account\_tier) | Account tier of the storage account | `string` | `"Standard"` | no |
 | <a name="input_blob_storage_account_enable_override"></a> [blob\_storage\_account\_enable\_override](#input\_blob\_storage\_account\_enable\_override) | Enable overriding the name of storage account. This will only be used if feature\_blob\_storage\_enabled is true. You need to pass blob\_storage\_account\_override\_name to pass the storage account name | `bool` | `false` | no |
-| <a name="input_blob_storage_account_exposed_headers"></a> [blob\_storage\_account\_exposed\_headers](#input\_blob\_storage\_account\_exposed\_headers) | List of exposed headers for CORS origins of storage account | `list(string)` | <pre>[<br>  "Etag"<br>]</pre> | no |
+| <a name="input_blob_storage_account_exposed_headers"></a> [blob\_storage\_account\_exposed\_headers](#input\_blob\_storage\_account\_exposed\_headers) | List of exposed headers for CORS origins of storage account | `list(string)` | <pre>[<br/>  "Etag"<br/>]</pre> | no |
 | <a name="input_blob_storage_account_override_name"></a> [blob\_storage\_account\_override\_name](#input\_blob\_storage\_account\_override\_name) | Storage account name. Only used if blob\_storage\_account\_enable\_override is true | `string` | `""` | no |
 | <a name="input_blob_storage_account_replication_type"></a> [blob\_storage\_account\_replication\_type](#input\_blob\_storage\_account\_replication\_type) | Replication type of storage account | `string` | `"GRS"` | no |
-| <a name="input_blob_storage_cors_allowed_headers"></a> [blob\_storage\_cors\_allowed\_headers](#input\_blob\_storage\_cors\_allowed\_headers) | List of allowed headers for CORS of storage account | `list(string)` | <pre>[<br>  "*"<br>]</pre> | no |
+| <a name="input_blob_storage_cors_allowed_headers"></a> [blob\_storage\_cors\_allowed\_headers](#input\_blob\_storage\_cors\_allowed\_headers) | List of allowed headers for CORS of storage account | `list(string)` | <pre>[<br/>  "*"<br/>]</pre> | no |
 | <a name="input_blob_storage_cors_allowed_maxage"></a> [blob\_storage\_cors\_allowed\_maxage](#input\_blob\_storage\_cors\_allowed\_maxage) | List of allowed maxage for CORS of storage account | `number` | `3000` | no |
-| <a name="input_blob_storage_cors_allowed_methods"></a> [blob\_storage\_cors\_allowed\_methods](#input\_blob\_storage\_cors\_allowed\_methods) | List of allowed methods for CORS of storage account | `list(string)` | <pre>[<br>  "GET",<br>  "POST",<br>  "PUT"<br>]</pre> | no |
-| <a name="input_blob_storage_cors_allowed_origins"></a> [blob\_storage\_cors\_allowed\_origins](#input\_blob\_storage\_cors\_allowed\_origins) | List of allowed origin for CORS of storage account | `list(string)` | <pre>[<br>  "*"<br>]</pre> | no |
+| <a name="input_blob_storage_cors_allowed_methods"></a> [blob\_storage\_cors\_allowed\_methods](#input\_blob\_storage\_cors\_allowed\_methods) | List of allowed methods for CORS of storage account | `list(string)` | <pre>[<br/>  "GET",<br/>  "POST",<br/>  "PUT"<br/>]</pre> | no |
+| <a name="input_blob_storage_cors_allowed_origins"></a> [blob\_storage\_cors\_allowed\_origins](#input\_blob\_storage\_cors\_allowed\_origins) | List of allowed origin for CORS of storage account | `list(string)` | <pre>[<br/>  "*"<br/>]</pre> | no |
 | <a name="input_cluster_id"></a> [cluster\_id](#input\_cluster\_id) | ID of the AKS cluster | `string` | n/a | yes |
 | <a name="input_cluster_integration_azuread_application_enable_override"></a> [cluster\_integration\_azuread\_application\_enable\_override](#input\_cluster\_integration\_azuread\_application\_enable\_override) | Enable overriding the name of azuread application. This will only be used if feature\_cluster\_integration\_azuread\_application\_enabled is true. You need to pass cluster\_integration\_azuread\_application\_override\_name to pass the azuread application name | `bool` | `false` | no |
 | <a name="input_cluster_integration_azuread_application_override_name"></a> [cluster\_integration\_azuread\_application\_override\_name](#input\_cluster\_integration\_azuread\_application\_override\_name) | Azuread application name. Only used if cluster\_integration\_azuread\_application\_enable\_override is true | `string` | `""` | no |
