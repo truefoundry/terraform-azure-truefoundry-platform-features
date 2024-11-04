@@ -11,7 +11,7 @@ resource "azuread_service_principal" "truefoundry_platform_features_service_prin
 
 resource "azuread_service_principal_password" "truefoundry_platform_features_service_principal_password" {
   count                = var.platform_feature_enabled ? var.feature_cluster_integration_enabled ? 1 : 0 : 0
-  service_principal_id = azuread_service_principal.truefoundry_platform_features_service_principal[0].object_id
+  service_principal_id = azuread_service_principal.truefoundry_platform_features_service_principal[0].id
   display_name         = local.service_principal_password
   end_date             = var.cluster_integration_service_principal_password_expiry_end_date
 }
