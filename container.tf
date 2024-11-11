@@ -1,11 +1,10 @@
 resource "azurerm_storage_account" "truefoundry_platform_storage_account" {
-  count                    = var.platform_feature_enabled ? var.feature_blob_storage_enabled ? 1 : 0 : 0
-  name                     = local.storage_account_name
-  resource_group_name      = var.resource_group_name
-  location                 = var.location
-  account_tier             = var.blob_storage_account_account_tier
-  account_replication_type = var.blob_storage_account_replication_type
-
+  count                         = var.platform_feature_enabled ? var.feature_blob_storage_enabled ? 1 : 0 : 0
+  name                          = local.storage_account_name
+  resource_group_name           = var.resource_group_name
+  location                      = var.location
+  account_tier                  = var.blob_storage_account_account_tier
+  account_replication_type      = var.blob_storage_account_replication_type
   enable_https_traffic_only     = true
   access_tier                   = "Hot"
   min_tls_version               = "TLS1_2"
