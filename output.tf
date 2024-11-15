@@ -2,6 +2,11 @@
 ## Blob Storage
 ##################################################################################
 
+output "platform_blob_storage_enabled" {
+  value       = var.platform_feature_enabled && var.feature_blob_storage_enabled
+  description = "Blob storage feature enabled"
+}
+
 output "truefoundry_blob_storage_account_id" {
   value       = var.feature_blob_storage_enabled ? azurerm_storage_account.truefoundry_platform_storage_account[0].id : ""
   description = "Storage account id"
@@ -42,6 +47,10 @@ output "truefoundry_blob_storage_root_url" {
 ## Container registry
 ##################################################################################
 
+output "platform_container_registry_enabled" {
+  value = var.platform_feature_enabled && var.feature_container_registry_enabled
+  description = "Container registry feature enabled"
+}
 output "truefoundry_container_registry_id" {
   value       = var.feature_container_registry_enabled ? azurerm_container_registry.truefoundry_container_registry[0].id : ""
   description = "Container registry ID"
@@ -66,6 +75,11 @@ output "truefoundry_container_registry_admin_password" {
 ##################################################################################
 ## Cluster Integrations
 ##################################################################################
+
+output "truefoundry_cluster_integrations_enabled" {
+  value = var.feature_cluster_integration_enabled
+  description = "Cluster integration feature enabled"
+}
 
 output "truefoundry_cluster_integrations_azuread_application_id" {
   value       = var.feature_cluster_integration_enabled ? azuread_application.truefoundry_platform_features_application[0].id : ""

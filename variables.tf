@@ -18,6 +18,23 @@ variable "platform_feature_enabled" {
   default     = true
 }
 
+variable "cluster_integration_enabled" {
+  description = "Enable cluster integration"
+  type        = bool
+  default     = false
+}
+
+variable "tfy_api_key" {
+  description = "API key for TrueFoundry"
+  type        = string
+}
+
+variable "trigger_helm_update" {
+  description = "Trigger helm update"
+  type        = bool
+  default     = false
+}
+
 ################################################################################
 # Cluster
 ################################################################################
@@ -29,6 +46,34 @@ variable "cluster_name" {
 
 variable "cluster_id" {
   description = "ID of the AKS cluster"
+  type        = string
+}
+
+variable "control_plane_url" {
+  description = "Control plane URL"
+  type        = string
+}
+
+################################################################################
+# Azure Config
+################################################################################
+variable "azure_subscription_id" {
+  description = "Azure subscription id"
+  type        = string
+}
+
+variable "azure_client_id" {
+  description = "Azure client id"
+  type        = string
+}
+
+variable "azure_client_secret" {
+  description = "Azure client secret"
+  type        = string
+}
+
+variable "azure_tenant_id" {
+  description = "Azure tenant id"
   type        = string
 }
 
@@ -116,6 +161,15 @@ variable "blob_storage_account_exposed_headers" {
   default     = ["Etag"]
 }
 
+variable "blob_storage_account_connection_string" {
+  description = "Connection string of the storage account"
+  type        = string
+}
+
+variable "blob_storage_account_root_url" {
+  description = "Root URL of the storage account"
+  type        = string
+}
 ################################################################################
 # Docker registry
 ################################################################################
@@ -158,6 +212,22 @@ variable "container_registry_public_network_access_enabled" {
   description = "Whether public network access is allowed for the container registry"
   type        = bool
   default     = true
+}
+
+variable "container_registry_admin_password" {
+  description = "Password for the admin user of the container registry"
+  type        = string
+  sensitive   = true
+}
+
+variable "container_registry_admin_username" {
+  description = "Username for the admin user of the container registry"
+  type        = string
+}
+
+variable "container_registry_login_server" {
+  description = "Login server of the container registry"
+  type        = string
 }
 
 ##################################################################################
