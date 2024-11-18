@@ -12,12 +12,6 @@ variable "location" {
   type        = string
 }
 
-variable "platform_feature_enabled" {
-  description = "Enable platform features like container registry and storage account"
-  type        = bool
-  default     = true
-}
-
 ################################################################################
 # Cluster
 ################################################################################

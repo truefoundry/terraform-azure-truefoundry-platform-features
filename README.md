@@ -62,7 +62,6 @@ No modules.
 | <a name="input_feature_cluster_integration_enabled"></a> [feature\_cluster\_integration\_enabled](#input\_feature\_cluster\_integration\_enabled) | Enable the support of cluster integration | `bool` | `true` | no |
 | <a name="input_feature_container_registry_enabled"></a> [feature\_container\_registry\_enabled](#input\_feature\_container\_registry\_enabled) | Enable docker registry feature in the platform | `bool` | `true` | no |
 | <a name="input_location"></a> [location](#input\_location) | Location of the storage account and container registry. This should be kept similar to resource group for ideal performance. | `string` | n/a | yes |
-| <a name="input_platform_feature_enabled"></a> [platform\_feature\_enabled](#input\_platform\_feature\_enabled) | Enable platform features like container registry and storage account | `bool` | `true` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | Name of the resource group | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
@@ -71,6 +70,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_truefoundry_blob_container_id"></a> [truefoundry\_blob\_container\_id](#output\_truefoundry\_blob\_container\_id) | Storage account container ID |
+| <a name="output_truefoundry_blob_storage_account_enabled"></a> [truefoundry\_blob\_storage\_account\_enabled](#output\_truefoundry\_blob\_storage\_account\_enabled) | Flag to enable blob storage account |
 | <a name="output_truefoundry_blob_storage_account_id"></a> [truefoundry\_blob\_storage\_account\_id](#output\_truefoundry\_blob\_storage\_account\_id) | Storage account id |
 | <a name="output_truefoundry_blob_storage_account_primary_blob_host"></a> [truefoundry\_blob\_storage\_account\_primary\_blob\_host](#output\_truefoundry\_blob\_storage\_account\_primary\_blob\_host) | Storage account primary blob host |
 | <a name="output_truefoundry_blob_storage_account_primary_connection_string"></a> [truefoundry\_blob\_storage\_account\_primary\_connection\_string](#output\_truefoundry\_blob\_storage\_account\_primary\_connection\_string) | Storage account primary connection string |
@@ -80,11 +80,13 @@ No modules.
 | <a name="output_truefoundry_cluster_integrations_azuread_application_client_id"></a> [truefoundry\_cluster\_integrations\_azuread\_application\_client\_id](#output\_truefoundry\_cluster\_integrations\_azuread\_application\_client\_id) | Azure AD application client ID |
 | <a name="output_truefoundry_cluster_integrations_azuread_application_id"></a> [truefoundry\_cluster\_integrations\_azuread\_application\_id](#output\_truefoundry\_cluster\_integrations\_azuread\_application\_id) | Azure AD application ID |
 | <a name="output_truefoundry_cluster_integrations_azuread_application_name"></a> [truefoundry\_cluster\_integrations\_azuread\_application\_name](#output\_truefoundry\_cluster\_integrations\_azuread\_application\_name) | n/a |
+| <a name="output_truefoundry_cluster_integrations_enabled"></a> [truefoundry\_cluster\_integrations\_enabled](#output\_truefoundry\_cluster\_integrations\_enabled) | Flag to enable cluster integrations |
 | <a name="output_truefoundry_cluster_integrations_service_principal_name"></a> [truefoundry\_cluster\_integrations\_service\_principal\_name](#output\_truefoundry\_cluster\_integrations\_service\_principal\_name) | n/a |
 | <a name="output_truefoundry_cluster_integrations_service_principal_password"></a> [truefoundry\_cluster\_integrations\_service\_principal\_password](#output\_truefoundry\_cluster\_integrations\_service\_principal\_password) | n/a |
 | <a name="output_truefoundry_cluster_integrations_service_principal_tenant_id"></a> [truefoundry\_cluster\_integrations\_service\_principal\_tenant\_id](#output\_truefoundry\_cluster\_integrations\_service\_principal\_tenant\_id) | n/a |
 | <a name="output_truefoundry_container_registry_admin_password"></a> [truefoundry\_container\_registry\_admin\_password](#output\_truefoundry\_container\_registry\_admin\_password) | Container registry admin password |
 | <a name="output_truefoundry_container_registry_admin_username"></a> [truefoundry\_container\_registry\_admin\_username](#output\_truefoundry\_container\_registry\_admin\_username) | Container registry admin username |
+| <a name="output_truefoundry_container_registry_enabled"></a> [truefoundry\_container\_registry\_enabled](#output\_truefoundry\_container\_registry\_enabled) | Flag to enable container registry |
 | <a name="output_truefoundry_container_registry_id"></a> [truefoundry\_container\_registry\_id](#output\_truefoundry\_container\_registry\_id) | Container registry ID |
 | <a name="output_truefoundry_container_registry_login_server"></a> [truefoundry\_container\_registry\_login\_server](#output\_truefoundry\_container\_registry\_login\_server) | Container registry login server url |
 <!-- END_TF_DOCS -->
