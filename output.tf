@@ -2,7 +2,7 @@
 ## Blob Storage
 ##################################################################################
 output "truefoundry_blob_storage_account_enabled" {
-  value = var.feature_blob_storage_enabled
+  value       = var.feature_blob_storage_enabled
   description = "Flag to enable blob storage account"
 }
 
@@ -47,7 +47,7 @@ output "truefoundry_blob_storage_root_url" {
 ##################################################################################
 
 output "truefoundry_container_registry_enabled" {
-  value = var.feature_container_registry_enabled
+  value       = var.feature_container_registry_enabled
   description = "Flag to enable container registry"
 }
 
@@ -77,7 +77,7 @@ output "truefoundry_container_registry_admin_password" {
 ##################################################################################
 
 output "truefoundry_cluster_integrations_enabled" {
-  value = var.feature_cluster_integration_enabled
+  value       = var.feature_cluster_integration_enabled
   description = "Flag to enable cluster integrations"
 }
 
