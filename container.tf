@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "truefoundry_platform_storage_account" {
-  count                         = var.platform_feature_enabled ? var.feature_blob_storage_enabled ? 1 : 0 : 0
+  count                         = var.feature_blob_storage_enabled ? 1 : 0
   name                          = local.storage_account_name
   resource_group_name           = var.resource_group_name
   location                      = var.location
@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "truefoundry_platform_storage_account" {
 }
 
 resource "azurerm_storage_container" "truefoundry_platform_container" {
-  count                = var.platform_feature_enabled ? var.feature_blob_storage_enabled ? 1 : 0 : 0
+  count                = var.feature_blob_storage_enabled ? 1 : 0
   name                 = local.container_name
   storage_account_name = azurerm_storage_account.truefoundry_platform_storage_account[0].name
 }
