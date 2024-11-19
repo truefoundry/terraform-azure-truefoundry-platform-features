@@ -35,7 +35,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_blob_container_enable_override"></a> [blob\_container\_enable\_override](#input\_blob\_container\_enable\_override) | Enable overriding the name of container. This will only be used if feature\_blob\_storage\_enabled is true. You need to pass container\_override\_name to pass the container name | `bool` | `true` | no |
+| <a name="input_blob_container_enable_override"></a> [blob\_container\_enable\_override](#input\_blob\_container\_enable\_override) | Enable overriding the name of container. This will only be used if feature\_blob\_storage\_enabled is true. You need to pass container\_override\_name to pass the container name | `bool` | `false` | no |
 | <a name="input_blob_container_override_name"></a> [blob\_container\_override\_name](#input\_blob\_container\_override\_name) | Container name. Only used if container\_enable\_override is true | `string` | `""` | no |
 | <a name="input_blob_storage_account_account_tier"></a> [blob\_storage\_account\_account\_tier](#input\_blob\_storage\_account\_account\_tier) | Account tier of the storage account | `string` | `"Standard"` | no |
 | <a name="input_blob_storage_account_enable_override"></a> [blob\_storage\_account\_enable\_override](#input\_blob\_storage\_account\_enable\_override) | Enable overriding the name of storage account. This will only be used if feature\_blob\_storage\_enabled is true. You need to pass blob\_storage\_account\_override\_name to pass the storage account name | `bool` | `false` | no |
