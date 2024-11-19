@@ -1,5 +1,5 @@
 resource "azurerm_container_registry" "truefoundry_container_registry" {
-  count                         = var.platform_feature_enabled ? var.feature_container_registry_enabled ? 1 : 0 : 0
+  count                         = var.feature_container_registry_enabled ? 1 : 0
   name                          = local.container_registry_name
   resource_group_name           = var.resource_group_name
   location                      = var.location
