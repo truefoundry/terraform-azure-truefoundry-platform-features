@@ -55,7 +55,7 @@ variable "blob_storage_account_override_name" {
 variable "blob_container_enable_override" {
   description = "Enable overriding the name of container. This will only be used if feature_blob_storage_enabled is true. You need to pass container_override_name to pass the container name"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "blob_container_override_name" {
