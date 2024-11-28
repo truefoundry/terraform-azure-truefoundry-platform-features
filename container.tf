@@ -5,7 +5,6 @@ resource "azurerm_storage_account" "truefoundry_platform_storage_account" {
   location                      = var.location
   account_tier                  = var.blob_storage_account_account_tier
   account_replication_type      = var.blob_storage_account_replication_type
-  enable_https_traffic_only     = true
   access_tier                   = "Hot"
   min_tls_version               = "TLS1_2"
   public_network_access_enabled = true
