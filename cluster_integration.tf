@@ -22,3 +22,11 @@ resource "azurerm_role_assignment" "truefoundry_reader_role_assignment" {
   role_definition_name = var.cluster_integration_service_principal_role
   principal_id         = azuread_service_principal.truefoundry_platform_features_service_principal[0].object_id
 }
+
+
+resource "azurerm_role_assignment" "truefoundry_diagnostic_settings_read_role_assignment" {
+  count                = var.feature_cluster_integration_enabled ? 1 : 0
+  scope                = var.cluster_id
+  role_definition_name = var.cluster_integration_diagnostic_settings_role
+  principal_id         = azuread_service_principal.truefoundry_platform_features_service_principal[0].object_id
+}

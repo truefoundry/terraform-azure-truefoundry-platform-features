@@ -198,6 +198,12 @@ variable "cluster_integration_service_principal_role" {
   default     = "Reader"
 }
 
+variable "cluster_integration_diagnostic_settings_role" {
+  description = "Role that will be assigned to the service principal on AKS cluster for diagnostic settings"
+  type        = string
+  default     = "Monitoring Reader"
+}
+
 ##################################################################################
 ## Other variables
 ##################################################################################
