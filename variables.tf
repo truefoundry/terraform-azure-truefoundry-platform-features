@@ -198,6 +198,12 @@ variable "cluster_integration_service_principal_role" {
   default     = "Reader"
 }
 
+variable "cluster_integration_cluster_operator_role" {
+  description = "Role that will be assigned to the service principal on AKS cluster for cluster operator"
+  type        = string
+  default     = "Azure Kubernetes Service Contributor Role"
+}
+
 variable "cluster_integration_diagnostic_settings_role" {
   description = "Role that will be assigned to the service principal on AKS cluster for diagnostic settings"
   type        = string
